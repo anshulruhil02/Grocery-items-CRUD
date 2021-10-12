@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/app.css">
+    <title>All products</title>
+</head>
+
+<body>
+    <h1>All products</h1>
+    <section>
+        <ul>
+            <% for(let product of products) { %>
+                <li><a href="/products/<%= product._id %>">
+                        <%= product.name %>
+                    </a></li>
+                <% } %>
+        </ul>
+        <a href="/products/new">New Product</a>
+    </section>
+</body>
+
+</html>
